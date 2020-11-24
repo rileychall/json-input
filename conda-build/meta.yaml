@@ -1,0 +1,34 @@
+{% set name = "jsoninput" %}
+{% set version = "0.0.1" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+    git_rev: "{{ version }}"
+    git_url: https://github.com/rileychall/json-input.git
+
+build:
+    script: python setup.py install
+    noarch: python
+
+requirements:
+    build:
+        - jsonschema
+        - python
+        - setuptools
+
+    run:
+        - jsonschema
+        - python
+
+test:
+    imports:
+        - jsoninput
+
+about:
+    home: "https://github.com/rileychall/json-input"
+    license: MIT
+    license_family: MIT
+    summary: "A utility for loading and checking JSON files against a schema"
