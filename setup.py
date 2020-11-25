@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="jsoninput",
-    version="0.0.1",
+    version="0.0.2",
     author="Riley Hall",
     author_email="riley.hall.va@gmail.com",
     description="A utility for loading and checking JSON files against a schema",
